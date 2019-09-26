@@ -24,10 +24,10 @@ class CashbackHackTests {
     /**
      * Проверяет работу метода remain класса CashbackHackService.
      *
-     * @param currentSumm      - текущая сумма
-     * @param expectedRestSumm - недостающая сумма для максимального кэшбека
+     * @param currentSum         - текущая сумма
+     * @param expectedRemaintSum - недостающая сумма для максимального кэшбека
      */
-    @ParameterizedTest(name = "{index} => currentSumm={0}, expectedRestSumm={1}")
+    @ParameterizedTest(name = "{index} => currentSum={0}, expectedRemaintSum={1}")
     @CsvSource({
             "0, 1000",
             "999, 1",
@@ -35,9 +35,8 @@ class CashbackHackTests {
             "1364, 636",
             "2000, 0"
     })
-    void getRestSumm(int currentSumm, int expectedRestSumm) {
-        int restSumm = cashbackHackService.remain(currentSumm);
-        Assertions.assertEquals(expectedRestSumm, restSumm, "Оставшаяся сумма расчитана неверно!");
+    void getRemainSum(int currentSum, int expectedRemaintSum) {
+        int remainSum = cashbackHackService.remain(currentSum);
+        Assertions.assertEquals(expectedRemaintSum, remainSum, "Оставшаяся сумма расчитана неверно!");
     }
-
 }

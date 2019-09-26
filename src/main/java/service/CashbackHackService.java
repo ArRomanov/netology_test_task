@@ -17,6 +17,14 @@ public class CashbackHackService {
      * @return - возвращает недостающую сумму.
      */
     public int remain(int amount) {
+        boolean isNeedMore = amount % boundary != 0;
+
+        if (amount == 0) { // Добавил проверку на 0, потому что изначально прописал такой сценарий, но тесты не проходили
+            return 1000;
+        } else if (!isNeedMore) {
+            return 0;
+        }
+
         return boundary - amount % boundary;
     }
 }
