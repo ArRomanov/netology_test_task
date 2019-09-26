@@ -1,9 +1,9 @@
-# Folders
-.gradle/
+# IDE files
 .idea/
-build/
 
 # Compiled class file
+build/
+out/
 *.class
 
 # Log file
@@ -30,3 +30,7 @@ hs_err_pid*
 
 # Gradle files
 settings.gradle
+.gradle/
+
+# Other
+.attach_pid*
