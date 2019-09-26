@@ -7,5 +7,4 @@ branches:
 build: off
 
 build_script:
-  - ./gradlew wrapper
   - ./gradlew build
