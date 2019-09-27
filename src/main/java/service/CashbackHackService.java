@@ -20,7 +20,7 @@ public class CashbackHackService {
         boolean isNeedMore = amount % boundary != 0;
 
         if (amount == 0) { // Добавил проверку на 0, потому что изначально прописал такой сценарий, но тесты не проходили
-            return 1000;
+            return boundary;
         } else if (!isNeedMore) {
             return 0;
         }
