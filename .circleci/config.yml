@@ -11,5 +11,5 @@ jobs:
     steps:
       # run tests!
       - checkout
-      - chmod +x ./gradlew
+      - run: chmod +x ./gradlew
       - run: ./gradlew test
