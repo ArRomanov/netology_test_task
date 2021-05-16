@@ -8,8 +8,8 @@ jobs:
     docker:
       - image: circleci/openjdk:11-jdk
 
-    working_directory: ~/repo
-
     steps:
       # run tests!
+      - checkout
+      - chmod +x ./gradlew
       - run: ./gradlew test
